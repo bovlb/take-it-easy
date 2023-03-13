@@ -66,6 +66,8 @@ function update() {
         ctx.stroke();
         ctx.closePath();
     }
+    console.log("height=", height);
+    document.getElementById('score').parentElement.style.fontSize = canvas.parentElement.offsetHeight / 14;
     document.getElementById('score').textContent = score;
 }
 
