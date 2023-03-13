@@ -1,2 +1,3 @@
-/* TABLE.inner { border: solid thick black; } */
-/* TABLE.outer { border: solid thick black; } */
+TABLE { padding: 0;}
+CANVAS { width: 100%; height: 100%; }
+SELECT { width: 100%; height: 100%; }

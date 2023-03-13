@@ -26,6 +26,13 @@ points = [
 function update() {
     var score = 0;
     var canvas = document.getElementById("board");
+    // console.log(canvas.parentElement);
+    // console.log("width=", canvas.parentElement.offsetWidth);
+    
+    //canvas.width = canvas.parentElement.offsetWidth * 0.5;
+    //canvas.height = canvas.parentElement.offsetHeight * 0.5;
+
+
     var width = canvas.width;
     var height = canvas.height;
     var thickness = Math.min(width, height) / 20;
