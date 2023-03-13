@@ -2,3 +2,9 @@ TABLE { padding: 0;}
 CANVAS { width: 100%; height: 100%; }
 SELECT { width: 100%; height: 100%; }
 TD { height; 14%; }
+
+.select-items div,.select-selected {
+    width: 100%;
+    height:100%;
+    font-size: 48pt;
+}

@@ -40,6 +40,7 @@ function update() {
     ctx.clearRect(0, 0, width, height);
     document.querySelectorAll('select').forEach(item => {
         score += Number(item.value);
+        item.style.fontSize = item.parentElement.offsetHeight * 0.5;
         if(item.value != "0" && item.hasAttribute('data-line')) {
             ctx.beginPath();
             var number = item.options[item.selectedIndex].text;
@@ -67,8 +68,11 @@ function update() {
         ctx.closePath();
     }
     console.log("height=", height);
-    document.getElementById('score').parentElement.style.fontSize = canvas.parentElement.offsetHeight / 14;
-    document.getElementById('score').textContent = score;
+    var scoreElement = document.getElementById('score');
+    scoreElement.parentElement.style.fontSize = scoreElement.parentElement.parentElement.offsetHeight * 0.25;
+    console.log(scoreElement.parentElement.parentElement, scoreElement.parentElement.parentElement.offsetHeight);
+    scoreElement.textContent = score;
+    document.getElementById('reset').style.fontSize = scoreElement.parentElement.parentElement.offsetHeight * 0.5;
 }
 
 function reset() {
